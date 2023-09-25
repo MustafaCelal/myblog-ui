@@ -1,0 +1,21 @@
+### ExtJs ###
+.architect
+.sencha
+bootstrap.*
+classic.json*
+modern.json*
+build/
+ext/
+resources/sass/.sass-cache/
+resources/.arch-internal-preview.css
+.arch-internal-preview.css
+
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+
+sencha-error-*
