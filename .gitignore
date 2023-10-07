@@ -1,6 +1,6 @@
 ### ExtJs ###
 .architect
-.sencha
+/.sencha/
 bootstrap.*
 classic.json*
 modern.json*
