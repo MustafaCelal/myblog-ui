@@ -3,16 +3,16 @@
  * and launch() the Application class.
  */
 Ext.application({
-    extend: 'MyBlog.Application',
+    extend: 'MySpace.Application',
 
-    name: 'MyBlog',
+    name: 'MySpace',
 
     requires: [
-        // This will automatically load all classes in the MyBlog namespace
+        // This will automatically load all classes in the MySpace namespace
         // so that application classes do not need to require each other.
-        'MyBlog.*'
+        'MySpace.*'
     ],
 
     // The name of the initial view to create.
-    mainView: 'MyBlog.view.main.Main'
+    mainView: 'MySpace.view.main.Main'
 });

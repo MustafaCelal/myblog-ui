@@ -1,12 +1,12 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('MyBlog.view.main.List', {
+Ext.define('MySpace.view.main.List', {
     extend: 'Ext.grid.Grid',
     xtype: 'mainlist',
 
     requires: [
-        'MyBlog.store.Personnel'
+        'MySpace.store.Personnel'
     ],
 
     title: 'Personnel Modern',
@@ -15,7 +15,7 @@ Ext.define('MyBlog.view.main.List', {
         type: 'personnel'
     },
 
-    columns: [{ 
+    columns: [{
         text: 'Name',
         dataIndex: 'name',
         width: 100,
@@ -25,11 +25,11 @@ Ext.define('MyBlog.view.main.List', {
     }, {
         text: 'Email',
         dataIndex: 'email',
-        width: 230 
-    }, { 
+        width: 230
+    }, {
         text: 'Phone',
         dataIndex: 'phone',
-        width: 150 
+        width: 150
     }],
 
     listeners: {

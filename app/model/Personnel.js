@@ -1,5 +1,5 @@
-Ext.define('MyBlog.model.Personnel', {
-    extend: 'MyBlog.model.Base',
+Ext.define('MySpace.model.Personnel', {
+    extend: 'MySpace.model.Base',
 
     fields: [
         'name', 'email', 'phone'

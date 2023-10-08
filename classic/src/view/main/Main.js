@@ -5,7 +5,7 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define('MyBlog.view.main.Main', {
+Ext.define('MySpace.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
 
@@ -13,8 +13,8 @@ Ext.define('MyBlog.view.main.Main', {
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
 
-        'MyBlog.view.main.MainController',
-        'MyBlog.view.main.MainModel'
+        'MySpace.view.main.MainController',
+        'MySpace.view.main.MainModel'
     ],
 
     controller: 'main',
@@ -98,22 +98,22 @@ Ext.define('MyBlog.view.main.Main', {
             html: '{loremIpsum}'
         }
     }, {
-        title: 'LIBRARY',
-        iconCls: 'fa-book',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
         title: 'PROJECTS',
         iconCls: 'fa-laptop-code',
         bind: {
             html: '{loremIpsum}'
         }
-    // }, {
-    //     title: 'WATCH LİST',
-    //     iconCls: 'fa-tv',
-    //     bind: {
-    //         html: '{loremIpsum}'
-    //     }
+    }, {
+        title: 'LIBRARY',
+        iconCls: 'fa-book',
+        bind: {
+            html: '{loremIpsum}'
+        }
+        // }, {
+        //     title: 'WATCH LİST',
+        //     iconCls: 'fa-tv',
+        //     bind: {
+        //         html: '{loremIpsum}'
+        //     }
     }]
 });
