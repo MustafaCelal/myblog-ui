@@ -14,8 +14,7 @@ Ext.define('MyBlog.view.main.Main', {
         'Ext.window.MessageBox',
 
         'MyBlog.view.main.MainController',
-        'MyBlog.view.main.MainModel',
-        'MyBlog.view.main.List'
+        'MyBlog.view.main.MainModel'
     ],
 
     controller: 'main',
@@ -74,30 +73,47 @@ Ext.define('MyBlog.view.main.Main', {
         }
     },
 
-    items: [{
+    items: [{// TODO - this menu will exclude an another file
         title: 'Home',
         iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
-        items: [{
-            xtype: 'mainlist'
-        }]
-    }, {
-        title: 'Users',
-        iconCls: 'fa-user',
         bind: {
             html: '{loremIpsum}'
         }
     }, {
-        title: 'Groups',
-        iconCls: 'fa-users',
+        title: 'BLOG',
+        iconCls: 'fa-pen',
         bind: {
             html: '{loremIpsum}'
         }
     }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
+        title: 'NOTES',
+        iconCls: 'fa-window-restore',
         bind: {
             html: '{loremIpsum}'
         }
+    }, {
+        title: 'TASKS',
+        iconCls: 'fa-clipboard-list',
+        bind: {
+            html: '{loremIpsum}'
+        }
+    }, {
+        title: 'LIBRARY',
+        iconCls: 'fa-book',
+        bind: {
+            html: '{loremIpsum}'
+        }
+    }, {
+        title: 'PROJECTS',
+        iconCls: 'fa-laptop-code',
+        bind: {
+            html: '{loremIpsum}'
+        }
+    // }, {
+    //     title: 'WATCH LİST',
+    //     iconCls: 'fa-tv',
+    //     bind: {
+    //         html: '{loremIpsum}'
+    //     }
     }]
 });
