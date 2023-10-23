@@ -27,10 +27,7 @@ Ext.define('MySpace.view.main.Main', {
     },
     items: [{// TODO - this menu will exclude an another file
         title: 'Home',
-        iconCls: 'fa-home',
-        items: [{
-            xtype: 'tasklist',
-        }]
+        iconCls: 'fa-home'
     }, {
         title: 'BLOG',
         iconCls: 'fa-pen',
@@ -46,15 +43,9 @@ Ext.define('MySpace.view.main.Main', {
     }, {
         title: 'TASKS',
         iconCls: 'fa-clipboard-list',
-        items: [{
-            xtype: 'tasklist',
-            width: '70%',
-            // layout: {
-            //     type: 'vbox',
-            //     align: 'center',
-            //     pack: 'center',
-            // },
-        }]
+        bind: {
+            html: '{loremIpsum}'
+        }
     }, {
         title: 'PROJECTS',
         iconCls: 'fa-laptop-code',
