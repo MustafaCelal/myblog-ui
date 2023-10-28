@@ -3,7 +3,7 @@
  * "mainView" property. That setting causes an instance of this class to be created and
  * added to the Viewport container.
  */
-Ext.define('MyBlog.view.main.Main', {
+Ext.define('MySpace.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
 
@@ -33,19 +33,19 @@ Ext.define('MyBlog.view.main.Main', {
             items: [{
                 xtype: 'mainlist'
             }]
-        },{
+        }, {
             title: 'Users',
             iconCls: 'x-fa fa-user',
             bind: {
                 html: '{loremIpsum}'
             }
-        },{
+        }, {
             title: 'Groups',
             iconCls: 'x-fa fa-users',
             bind: {
                 html: '{loremIpsum}'
             }
-        },{
+        }, {
             title: 'Settings',
             iconCls: 'x-fa fa-cog',
             bind: {

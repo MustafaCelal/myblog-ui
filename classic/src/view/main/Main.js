@@ -1,11 +1,4 @@
-/**
- * This class is the main view for the application. It is specified in app.js as the
- * "mainView" property. That setting automatically applies the "viewport"
- * plugin causing this view to become the body element (i.e., the viewport).
- *
- * TODO - Replace this content of this view to suite the needs of your application.
- */
-Ext.define('MyBlog.view.main.Main', {
+Ext.define('MySpace.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
 
@@ -13,8 +6,8 @@ Ext.define('MyBlog.view.main.Main', {
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
 
-        'MyBlog.view.main.MainController',
-        'MyBlog.view.main.MainModel'
+        'MySpace.view.main.MainController',
+        'MySpace.view.main.MainModel'
     ],
 
     controller: 'main',
@@ -22,63 +15,23 @@ Ext.define('MyBlog.view.main.Main', {
 
     ui: 'navigation',
 
-    tabBarHeaderPosition: 1,
-    titleRotation: 0,
-    tabRotation: 0,
-
-    header: {
-        layout: {
-            align: 'stretchmax'
-        },
-        title: {
-            bind: {
-                text: '{name}'
-            },
-            flex: 0
-        },
-        iconCls: 'fa-th-list'
-    },
-
     tabBar: {
-        flex: 1,
         layout: {
-            align: 'stretch',
-            overflowHandler: 'none'
+            pack: 'center'
         }
     },
 
-    responsiveConfig: {
-        tall: {
-            headerPosition: 'top'
-        },
-        wide: {
-            headerPosition: 'left'
-        }
+    defaults:{
+        layout: 'center',
+        // width: '70%'
     },
-
-    defaults: {
-        bodyPadding: 20,
-        tabConfig: {
-            responsiveConfig: {
-                wide: {
-                    iconAlign: 'left',
-                    textAlign: 'left'
-                },
-                tall: {
-                    iconAlign: 'top',
-                    textAlign: 'center',
-                    width: 120
-                }
-            }
-        }
-    },
-
     items: [{// TODO - this menu will exclude an another file
         title: 'Home',
         iconCls: 'fa-home',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [{
+            xtype: 'kanban',
+            width: '70%',
+        }]
     }, {
         title: 'BLOG',
         iconCls: 'fa-pen',
@@ -87,13 +40,16 @@ Ext.define('MyBlog.view.main.Main', {
         }
     }, {
         title: 'NOTES',
-        iconCls: 'fa-window-restore',
+        iconCls: 'fa-window-restore sidebar-tab-icon',
         bind: {
             html: '{loremIpsum}'
         }
     }, {
-        title: 'TASKS',
-        iconCls: 'fa-clipboard-list',
+        title: 'KANBAN',
+        iconCls: 'fa-clipboard-list'
+    }, {
+        title: 'PROJECTS',
+        iconCls: 'fa-laptop-code',
         bind: {
             html: '{loremIpsum}'
         }
@@ -103,17 +59,11 @@ Ext.define('MyBlog.view.main.Main', {
         bind: {
             html: '{loremIpsum}'
         }
-    }, {
-        title: 'PROJECTS',
-        iconCls: 'fa-laptop-code',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    // }, {
-    //     title: 'WATCH LİST',
-    //     iconCls: 'fa-tv',
-    //     bind: {
-    //         html: '{loremIpsum}'
-    //     }
+        // }, {
+        //     title: 'WATCH LİST',
+        //     iconCls: 'fa-tv',
+        //     bind: {
+        //         html: '{loremIpsum}'
+        //     }
     }]
 });
